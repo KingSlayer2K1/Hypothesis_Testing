@@ -46,36 +46,6 @@ This script performs the Chi-Square test on the dataset and prints the statistic
 
 ---
 
-## 📂 Repository Structure
-
-```
-.
-├── Student Meal Habits and Class Schedule Survey.csv
-│   # Raw dataset collected through survey
-
-├── requirements.txt
-│   # Python dependencies required to run the project
-
-├── chi_sq.py
-│   # Main script that performs the Chi-Square hypothesis testing
-
-├── README.md
-│   # Project documentation
-
-└── kaggle_plot/
-    ├── 0_main_hypothesis_plot.py
-    ├── 1_demographics_plot.py
-    ├── 2_affected_meals_plot.py
-    ├── 3_coping_mechanisms_plot.py
-    ├── 4_proposed_solutions_plot.py
-    └── images/
-        # Generated visualization PNG files
-```
-
----
-
----
-
 ##  Generated Plots
 
 ### Class Schedule Clash vs Meal Skipping

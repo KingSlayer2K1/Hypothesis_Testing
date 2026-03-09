@@ -67,7 +67,7 @@ This script performs the Chi-Square test on the dataset and prints the statistic
 ├── README.md
 │   # Project documentation
 
-└── kaggle_plots/
+└── kaggle_plot/
     ├── 0_main_hypothesis_plot.py
     ├── 1_demographics_plot.py
     ├── 2_affected_meals_plot.py

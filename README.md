@@ -1,12 +1,8 @@
 # Hypothesis Testing: Class Schedule vs Meal Skipping
 
-**Course:** Research Methodology (RM6201)
-**Institute:** IIT Patna
-**Group:** 17
-
 ---
 
-## 📌 About
+## About
 
 This project performs a **Chi-Square Test of Independence** to determine whether there is a statistically significant relationship between **class timing clashes and meal-skipping frequency among IIT Patna students**.
 
@@ -15,9 +11,8 @@ The repository includes the **statistical testing code** and **data visualizatio
 
 ---
 
-## 🎯 Hypothesis
+## Hypothesis
 
-**Hypothesis 1:**
 IIT Patna students whose **class schedule clashes with mess timing** skip meals more frequently than students **without timing clashes**.
 
 **Statistical Method Used**
@@ -33,15 +28,15 @@ Since the p-value is **less than 0.05**, we reject the null hypothesis and concl
 
 ---
 
-## ⚙️ Setup
+##  Setup
 
-### 1️⃣ Install Dependencies
+### 1️. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
 ```
 
-### 2️⃣ Run the Statistical Analysis
+### 2️. Run the Statistical Analysis
 
 ```bash
 python chi_sq.py
@@ -81,7 +76,7 @@ This script performs the Chi-Square test on the dataset and prints the statistic
 
 ---
 
-## 📊 Generated Plots
+##  Generated Plots
 
 ### Class Schedule Clash vs Meal Skipping
 
@@ -106,7 +101,7 @@ This script performs the Chi-Square test on the dataset and prints the statistic
 ---
 ---
 
-## 🧪 Statistical Method
+##  Statistical Method
 
 The **Chi-Square Test of Independence** is used to evaluate whether two categorical variables are related.
 
@@ -119,7 +114,7 @@ The test evaluates whether the observed distribution significantly differs from 
 
 ---
 
-## 📈 Dataset
+##  Dataset
 
 * **Total Responses:** 114
 * **Population:** IIT Patna students
@@ -127,10 +122,9 @@ The test evaluates whether the observed distribution significantly differs from 
 
 ---
 
-## 👨‍💻 Authors
+##  Authors
 
-Group 17
-Research Methodology Project
+Ayush Dutt
 **IIT Patna**
 
 ---

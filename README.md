@@ -79,17 +79,31 @@ This script performs the Chi-Square test on the dataset and prints the statistic
 
 ---
 
-## 📊 Data Visualization
+---
 
-The `kaggle_plots` directory contains Python scripts used to generate visual insights from the dataset, including:
+## 📊 Generated Plots
 
-* Demographic distribution of respondents
-* Meals most frequently skipped
-* Common coping mechanisms students use
-* Student-proposed solutions to the scheduling issue
+### Class Schedule Clash vs Meal Skipping
 
-Generated plots are saved inside the **`images/`** folder.
+![Class Clash vs Skip](kaggle_plot/images/clash_vs_skip_plot.png)
 
+### Student Demographics
+
+![Demographics](kaggle_plot/images/plot1_demographics.png)
+
+### Meals Most Frequently Skipped
+
+![Affected Meals](kaggle_plot/images/plot2_affected.png)
+
+### Student Coping Mechanisms
+
+![Coping Mechanisms](kaggle_plot/images/plot3_coping.png)
+
+### Proposed Solutions
+
+![Solutions](kaggle_plot/images/plot4_solutions.png)
+
+---
 ---
 
 ## 🧪 Statistical Method

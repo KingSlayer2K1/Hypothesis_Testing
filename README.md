@@ -4,28 +4,28 @@
 
 ## About
 
-This project performs a **Chi-Square Test of Independence** to determine whether there is a statistically significant relationship between **class timing clashes and meal-skipping frequency among IIT Patna students**.
+This project performs a rigorous statistical analysis to determine whether there is a significant relationship between **class timing clashes and meal-skipping frequency among IIT Patna students**.
 
-The analysis is based on **114 survey responses** collected from students.
-The repository includes the **statistical testing code** and **data visualization scripts** used to analyze the dataset.
+The analysis is based on **120 survey responses**. The repository includes the **statistical testing code** (utilizing category collapse, Yates' Continuity Correction, and Fisher's Exact Test) and **data visualization scripts** used to analyze the dataset.
 
 ---
 
 ## Hypothesis
 
-IIT Patna students whose **class schedule clashes with mess timing** skip meals more frequently than students **without timing clashes**.
+**Null Hypothesis (H0):** There is no statistically significant relationship between class schedule clashes and meal-skipping frequency.
 
-**Statistical Method Used**
+**Alternate Hypothesis (H1):** IIT Patna students whose class schedule clashes with mess timing skip meals more frequently than students without timing clashes.
 
-* Pearson's Chi-Square Test of Independence
+**Statistical Methods Used**
+* Pearson's Chi-Square Test (with Yates' Continuity Correction on a collapsed 2x2 matrix)
+* Fisher's Exact Test (Two-Sided)
 
 **Result**
+* **Not Statistically Significant**
+* **Chi-Square p-value = 0.2056**
+* **Fisher Exact p-value = 0.1594**
 
-* **Statistically Significant**
-* **p-value = 0.0185**
-
-Since the p-value is **less than 0.05**, we reject the null hypothesis and conclude that **class timing clashes are associated with increased meal skipping**.
-
+Since the p-values are **greater than the 0.05 alpha threshold**, we **fail to reject the null hypothesis**. The data suggests that schedule clashes do not cause a statistically significant increase in complete meal skipping. Instead, visualizations reveal that students utilize secondary coping mechanisms (such as eating at the food court, ordering outside, or eating later) to secure nutrition.
 ---
 
 ##  Setup
@@ -41,9 +41,6 @@ pip install -r requirements.txt
 ```bash
 python chi_sq.py
 ```
-
-This script performs the Chi-Square test on the dataset and prints the statistical results.
-
 ---
 
 ##  Generated Plots
@@ -71,22 +68,27 @@ This script performs the Chi-Square test on the dataset and prints the statistic
 ---
 ---
 
-##  Statistical Method
+## Statistical Method
 
-The **Chi-Square Test of Independence** is used to evaluate whether two categorical variables are related.
+The testing pipeline validates statistical assumptions before determining significance.
 
-In this project:
+**Raw Evaluation**
 
-* **Variable 1:** Class schedule clash with mess timing
-* **Variable 2:** Frequency of skipping meals
+A 5×5 Chi-Square test is initially performed. If more than 20% of the expected cell counts are below 5, the test is considered unreliable due to data sparsity.
 
-The test evaluates whether the observed distribution significantly differs from what would be expected if the variables were independent.
+**Data Transformation**
+
+The original 5-point Likert responses are dichotomized into a 2×2 contingency table ("Low Frequency" vs "High Frequency") to satisfy Chi-Square test assumptions (DF = 1).
+
+**Dual Validation**
+
+Yates' Continuity Correction is applied to the Chi-Square statistic to reduce the risk of overestimating statistical significance. The result is then cross-validated using Fisher's Exact Test.
 
 ---
 
 ##  Dataset
 
-* **Total Responses:** 114
+* **Total Responses:** 120
 * **Population:** IIT Patna students
 * **Data Type:** Survey-based categorical responses
 
